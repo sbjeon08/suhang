@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:lottie/lottie.dart';
-import 'package:suhang/imageviewer.dart';
 import 'package:suhang/splashUI.dart';
 import 'firebase_options.dart';
 import 'package:intl/intl.dart';
@@ -145,33 +144,6 @@ class _RootpageState extends State<Rootpage> {
                   ],
                 ),
               ],
-            ),
-            SizedBox(
-              child: Row(
-                children: [
-                  VerticalDivider(
-                    color: Color(maintxt[index % 3]).withOpacity(0.6),
-                    thickness: 0.8,
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: IconButton(
-                      splashRadius: 30,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    imageviewer(url: input['url'])));
-                      },
-                      icon: Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Color(maintxt[index % 3]),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ),
           ],
         ),
